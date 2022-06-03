@@ -2,6 +2,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -52,12 +54,223 @@ table {
   border-spacing: 0;
 }
 
-h1 {
-  color: blue;
+@font-face {
+  font-family: Roboto;
+  src: url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap);
+}
+a {
+  text-decoration: none;
+  color: black;
 }
 
-main {
-  background-color: red;
+body {
+  font-family: "roboto";
+}
+
+button {
+  padding: 15px;
+  border-radius: 25px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  margin: auto;
+  color: white;
+  border: none;
+  font-weight: 500;
+}
+
+footer {
+  background-color: rgb(53, 53, 53);
+  color: white;
+  padding: 20px;
+  font-weight: 300;
+}
+footer h2 {
+  font-family: "Shrikhand", cursive;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 20px;
+}
+footer ul li i {
+  width: 20px;
+  height: 25px;
+}
+footer ul li span {
+  padding-left: 10px;
+  font-weight: 400;
+}
+footer ul li:nth-of-type(4) {
+  margin: 10px 0px 20px 0px;
+}
+
+.headerhome {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+.headerhome img {
+  height: 30px;
+}
+
+main form {
+  background-color: rgb(234, 234, 234);
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  border-top: 1px lightgrey solid;
+  box-shadow: inset -2px 2px 6px rgba(54, 54, 54, 0.2);
+}
+main form input {
+  border: none;
+  background-color: rgb(234, 234, 234);
+  justify-content: center;
+  padding-left: 10px;
+  max-width: 100px;
+}
+main form input::placeholder {
+  opacity: 0.7;
+  font-weight: 600;
+}
+main section:nth-of-type(1) {
+  background-color: rgb(246, 246, 246);
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+main section:nth-of-type(1) h1 {
+  font-size: 25px;
+  flex-basis: 100%;
+  font-weight: 600;
+  text-align: center;
+  padding: 15px 40px;
+}
+main section:nth-of-type(1) p {
+  font-size: 15px;
+  flex-basis: 100%;
+  text-align: center;
+  padding: 0px 20px 20px 20px;
+  font-weight: 300;
+}
+main section:nth-of-type(2) {
+  display: flex;
+  flex-wrap: wrap;
+}
+main section:nth-of-type(2) h2 {
+  flex-basis: 100%;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 30px 0px 20px 10px;
+}
+main section:nth-of-type(2) ol {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  margin-bottom: 25px;
+  counter-reset: compteliste;
+}
+main section:nth-of-type(2) ol li {
+  flex-basis: 80%;
+  border-radius: 15px;
+  box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31);
+  background-color: rgb(246, 246, 246);
+  margin: auto;
+  text-align: center;
+  font-weight: 500;
+  position: relative;
+}
+main section:nth-of-type(2) ol li a {
+  flex-basis: 100%;
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+main section:nth-of-type(2) ol li a i {
+  padding: 30px;
+  color: grey;
+  font-size: 1.1em;
+  width: 15px;
+}
+main section:nth-of-type(2) ol li:hover {
+  background-color: #f5edff;
+}
+main section:nth-of-type(2) ol li:hover i {
+  color: #9356DC;
+}
+main section:nth-of-type(2) ol li::before {
+  counter-increment: compteliste 1;
+  content: counter(compteliste);
+  position: absolute;
+  left: -10px;
+  bottom: 30px;
+  font-weight: 400;
+  font-size: 0.9em;
+  background-color: #9356DC;
+  border-radius: 20px;
+  width: 15px;
+  height: 15px;
+  padding: 3px;
+  color: white;
+}
+main section:nth-of-type(2) ol li i {
+  width: 20px;
+  height: 20px;
+  padding: 20px;
+  color: grey;
+  text-align: center;
+}
+main section:nth-of-type(3) {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(246, 246, 246);
+  row-gap: 15px;
+  padding-bottom: 50px;
+}
+main section:nth-of-type(3) h2 {
+  flex-basis: 100%;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 50px 0px 20px 10px;
+}
+main section:nth-of-type(3) a {
+  background-color: white;
+  border: 10px none solid;
+  border-radius: 20px;
+  padding-bottom: 15px;
+  flex-basis: 90%;
+  margin: auto;
+  position: relative;
+}
+main section:nth-of-type(3) a img {
+  width: 100%;
+  height: 180px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  object-fit: cover;
+}
+main section:nth-of-type(3) a div {
+  display: flex;
+  flex-wrap: wrap;
+}
+main section:nth-of-type(3) a div h3 {
+  flex-basis: 100%;
+  font-weight: 600;
+  padding: 10px 0px 5px 10px;
+}
+main section:nth-of-type(3) a div p {
+  font-weight: 300;
+  padding-left: 10px;
+}
+main section:nth-of-type(3) a div i {
+  font-size: 20px;
+}
+main section:nth-of-type(3) a div span {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 7px 10px;
+  background-color: rgb(153, 226, 208);
+  color: rgb(0, 135, 102);
+  font-weight: 500;
+  border-radius: 3px;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -114,8 +327,60 @@ table {
   border-spacing: 0;
 }
 
-h1 {
-  color: blue;
+@font-face {
+  font-family: Roboto;
+  src: url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap);
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font-family: "roboto";
+}
+
+button {
+  padding: 15px;
+  border-radius: 25px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  margin: auto;
+  color: white;
+  border: none;
+  font-weight: 500;
+}
+
+footer {
+  background-color: rgb(53, 53, 53);
+  color: white;
+  padding: 20px;
+  font-weight: 300;
+}
+footer h2 {
+  font-family: "Shrikhand", cursive;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 20px;
+}
+footer ul li i {
+  width: 20px;
+  height: 25px;
+}
+footer ul li span {
+  padding-left: 10px;
+  font-weight: 400;
+}
+footer ul li:nth-of-type(4) {
+  margin: 10px 0px 20px 0px;
+}
+
+.headerhome {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+.headerhome img {
+  height: 30px;
 }
 
 /*# sourceMappingURL=styles.css.map */
