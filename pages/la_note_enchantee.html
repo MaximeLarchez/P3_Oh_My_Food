@@ -10,14 +10,22 @@
 </head>
 <body>
     <header>
-        <img src="/assets/images/logo/ohmyfood.png" alt="logo de lentreprise">
-        <img src="/assets/images/restaurants/la_note_enchantee.jpg" alt="">
+        <span>
+            <a href="/index.html">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <P>Ohmyfood</P>
+        </span>
     </header>
     <main>
-        <h1>La note enchantée<i class="fa-regular fa-heart"></i></h1>
+        <figure>
+            <img src="/assets/images/restaurants/la_note_enchantee.jpg" alt="menu la note enchantée">
+        </figure>
+        <div class="menu">
+            <h1 class="h1menu">La note enchantée<i class="fa-regular fa-heart"></i></h1>
         
-        <section>
-            <h2>ENTREES</h2>
+            <section id="starter">
+            <h2><span class="green-line">ENTR</span>ÉES</h2>
             <article>
                 <h3>Ravioles de foie gras</h3>
                 <p>Accompagnés de leur crème à la truffe</p>
@@ -38,10 +46,10 @@
                 <p>Confiture de figue et pain toasté</p>
                 <p>35€</p>
             </article>    
-        </section>
+            </section>
 
-        <section>
-            <h2>PLATS</h2>
+            <section id="dishes">
+            <h2><span class="green-line">PLATS</span></h2>
             <article>
                 <h3>Noix de Coquille Saint-Jacques</h3>
                 <p>Sur lit de purée de céleri-rave</p>
@@ -57,10 +65,10 @@
                 <p>et riz sauvage aux zests de citron</p>
                 <p>44€</p>
             </article>
-        </section>
+            </section>
         
-        <section>
-            <h2>DESSERTS</h2>
+            <section id="dessert">
+            <h2><span class="green-line">DESS</span>ERTS</h2>
             <article>
                 <h3>Macaron noisette et chocolat</h3>
                 <p>Glace au caramel brun et sel de Guérande</p>
@@ -80,7 +88,8 @@
                 Commander
             </button>
 
-        </section>
+            </section>
+        </div>
         
 
     </main>
