@@ -122,6 +122,7 @@ header p {
 }
 
 main form {
+  width: 100%;
   background-color: rgb(234, 234, 234);
   display: flex;
   justify-content: center;
@@ -146,6 +147,7 @@ main #location {
   flex-wrap: wrap;
   padding-top: 30px;
   padding-bottom: 50px;
+  max-width: 100%;
 }
 main #location h1 {
   font-size: 25px;
@@ -252,7 +254,7 @@ main #restaurant a {
 }
 main #restaurant a img {
   width: 100%;
-  height: 180px;
+  height: 210px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   object-fit: cover;
@@ -271,7 +273,10 @@ main #restaurant a div p {
   padding-left: 10px;
 }
 main #restaurant a div i {
-  font-size: 20px;
+  position: absolute;
+  bottom: 25px;
+  right: 30px;
+  font-size: 25px;
 }
 main #restaurant a div span {
   position: absolute;
@@ -284,6 +289,56 @@ main #restaurant a div span {
   border-radius: 3px;
 }
 
+@media screen and (min-width: 560px) {
+  main #location {
+    width: 100%;
+  }
+  main #tutorial {
+    display: flex;
+    justify-content: center;
+  }
+  main #tutorial ol {
+    flex-basis: 500px;
+  }
+  main #restaurant {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+  }
+  main #restaurant a {
+    max-width: 45%;
+  }
+  main #restaurant a figure {
+    height: 220px;
+  }
+  main #restaurant a figure img {
+    object-fit: cover;
+    height: 180px;
+  }
+}
+@media screen and (min-width: 900px) {
+  main #tutorial {
+    display: flex;
+    flex-basis: 100%;
+  }
+  main #tutorial ol {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-basis: 100%;
+    justify-content: space-between;
+  }
+  main #tutorial ol li {
+    border-radius: 15px;
+    margin: auto;
+    text-align: center;
+    flex-basis: 30%;
+    box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31);
+  }
+  main #tutorial ol li a {
+    justify-content: center;
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -420,18 +475,25 @@ main figure img {
 }
 main .menu {
   width: 100%;
+  padding: 35px 15px 15px 15px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   background-color: rgb(246, 246, 246);
 }
 main .menu .h1menu {
-  padding: 30px 30px 0px 20px;
   font-size: 25px;
   font-weight: 500;
   font-family: "Shrikhand";
   background-color: rgb(246, 246, 246);
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
+  justify-content: space-between;
+  flex-basis: 100%;
+  display: flex;
+  padding-left: 15px;
+}
+main .menu i {
+  font-size: 25px;
 }
 main .menu #starter, main .menu #dishes, main .menu #dessert {
   display: flex;
@@ -439,11 +501,10 @@ main .menu #starter, main .menu #dishes, main .menu #dessert {
   justify-content: center;
   flex-wrap: wrap;
   background-color: rgb(246, 246, 246);
-  padding: 0px 10px;
 }
 main .menu #starter h2, main .menu #dishes h2, main .menu #dessert h2 {
   flex-basis: 100%;
-  margin: 40px 10px 5px 10px;
+  margin: 40px 10px 5px 13px;
 }
 main .menu #starter h2 .green-line, main .menu #dishes h2 .green-line, main .menu #dessert h2 .green-line {
   border-bottom: 1px #99E2D0 solid;
@@ -463,11 +524,11 @@ main .menu #starter article h3, main .menu #dishes article h3, main .menu #desse
   flex-basis: 100%;
   font-size: 18px;
   font-weight: 500;
-  padding: 5px 10px;
+  padding: 5px;
 }
 main .menu #starter article p:nth-of-type(1), main .menu #dishes article p:nth-of-type(1), main .menu #dessert article p:nth-of-type(1) {
   flex-basis: 80%;
-  padding: 5px 10px;
+  padding: 5px;
   font-size: 15px;
   font-weight: 300;
 }
