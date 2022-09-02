@@ -70,11 +70,173 @@ button {
   border-radius: 25px;
   background: linear-gradient(#FF79DA, #9356DC);
   margin: auto;
+  font-family: "roboto";
   color: white;
   border: none;
   font-weight: 500;
 }
 
+/*Loader*/
+body {
+  z-index: 1;
+  position: absolute;
+}
+body .loader {
+  display: flex;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgb(246, 246, 246);
+  justify-content: center;
+  align-items: center;
+  column-gap: 5%;
+  animation-duration: 3s;
+  animation: hide-loader 3s;
+  animation-fill-mode: forwards;
+}
+body .loader .firstloading {
+  background-color: #9356DC;
+  padding: 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  animation-name: loader;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+}
+body .loader .secondloading {
+  padding: 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #FF79DA;
+  animation-name: loader;
+  animation-duration: 0.8s;
+  animation-delay: 0.5s;
+  animation-timing-function: linear;
+}
+body .loader .thirdloading {
+  padding: 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #99E2D0;
+  animation-name: loader;
+  animation-duration: 0.8s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+}
+body .loader i {
+  font-size: 28px;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes loader {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  75% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes hide-loader {
+  70% {
+    opacity: 2;
+  }
+  85% {
+    opacity: 0;
+    z-index: 1;
+  }
+  100% {
+    z-index: 0;
+    opacity: 0;
+  }
+}
+/*hearth animation*/
+.like {
+  position: relative;
+}
+.like i:nth-of-type(1) {
+  position: absolute;
+  transform: scale(1);
+  transition: 300ms ease-in-out;
+}
+.like i:nth-of-type(2) {
+  color: transparent;
+  transform: scale(0);
+  transition: 300ms ease-in-out;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  color: transparent;
+}
+.like:hover i:nth-of-type(1), .like:active i:nth-of-type(1) {
+  transform: scale(0);
+  color: transparent;
+}
+.like:hover i:nth-of-type(2), .like:active i:nth-of-type(2) {
+  transform: scale(1);
+  color: linear-gradient(#FF79DA, #9356DC);
+}
+
+/*Page for menu*/
+.menu {
+  position: relative;
+  z-index: 1;
+}
+.menu #starter, .menu #dishes, .menu #dessert {
+  animation: animationmenu 1s;
+  z-index: -1;
+}
+.menu #starter article:nth-of-type(1), .menu #dishes article:nth-of-type(1), .menu #dessert article:nth-of-type(1) {
+  animation: animationmenu 1s 0.1s;
+}
+.menu #starter article:nth-of-type(2), .menu #dishes article:nth-of-type(2), .menu #dessert article:nth-of-type(2) {
+  animation: animationmenu 1s 0.2s;
+}
+.menu #starter article:nth-of-type(3), .menu #dishes article:nth-of-type(3), .menu #dessert article:nth-of-type(3) {
+  animation: animationmenu 1s 0.3s;
+}
+.menu #starter article:nth-of-type(4), .menu #dishes article:nth-of-type(4), .menu #dessert article:nth-of-type(4) {
+  animation: animationmenu 1s 0.4s;
+}
+
+@keyframes animationmenu {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes animationcheckbox {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-70px);
+  }
+}
+@keyframes animationiconecheck {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 footer {
   background-color: rgb(53, 53, 53);
   color: white;
@@ -272,12 +434,6 @@ main #restaurant a div p {
   font-weight: 300;
   padding-left: 10px;
 }
-main #restaurant a div i {
-  position: absolute;
-  bottom: 25px;
-  right: 30px;
-  font-size: 25px;
-}
 main #restaurant a div span {
   position: absolute;
   top: 15px;
@@ -287,6 +443,16 @@ main #restaurant a div span {
   color: rgb(0, 135, 102);
   font-weight: 500;
   border-radius: 3px;
+}
+main #restaurant a div .like {
+  position: absolute;
+  bottom: 25px;
+  right: 30px;
+  font-size: 25px;
+}
+
+footer a {
+  color: white;
 }
 
 @media screen and (min-width: 560px) {
@@ -407,11 +573,173 @@ button {
   border-radius: 25px;
   background: linear-gradient(#FF79DA, #9356DC);
   margin: auto;
+  font-family: "roboto";
   color: white;
   border: none;
   font-weight: 500;
 }
 
+/*Loader*/
+body {
+  z-index: 1;
+  position: absolute;
+}
+body .loader {
+  display: flex;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgb(246, 246, 246);
+  justify-content: center;
+  align-items: center;
+  column-gap: 5%;
+  animation-duration: 3s;
+  animation: hide-loader 3s;
+  animation-fill-mode: forwards;
+}
+body .loader .firstloading {
+  background-color: #9356DC;
+  padding: 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  animation-name: loader;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+}
+body .loader .secondloading {
+  padding: 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #FF79DA;
+  animation-name: loader;
+  animation-duration: 0.8s;
+  animation-delay: 0.5s;
+  animation-timing-function: linear;
+}
+body .loader .thirdloading {
+  padding: 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #99E2D0;
+  animation-name: loader;
+  animation-duration: 0.8s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+}
+body .loader i {
+  font-size: 28px;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes loader {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  75% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes hide-loader {
+  70% {
+    opacity: 2;
+  }
+  85% {
+    opacity: 0;
+    z-index: 1;
+  }
+  100% {
+    z-index: 0;
+    opacity: 0;
+  }
+}
+/*hearth animation*/
+.like {
+  position: relative;
+}
+.like i:nth-of-type(1) {
+  position: absolute;
+  transform: scale(1);
+  transition: 300ms ease-in-out;
+}
+.like i:nth-of-type(2) {
+  color: transparent;
+  transform: scale(0);
+  transition: 300ms ease-in-out;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  color: transparent;
+}
+.like:hover i:nth-of-type(1), .like:active i:nth-of-type(1) {
+  transform: scale(0);
+  color: transparent;
+}
+.like:hover i:nth-of-type(2), .like:active i:nth-of-type(2) {
+  transform: scale(1);
+  color: linear-gradient(#FF79DA, #9356DC);
+}
+
+/*Page for menu*/
+.menu {
+  position: relative;
+  z-index: 1;
+}
+.menu #starter, .menu #dishes, .menu #dessert {
+  animation: animationmenu 1s;
+  z-index: -1;
+}
+.menu #starter article:nth-of-type(1), .menu #dishes article:nth-of-type(1), .menu #dessert article:nth-of-type(1) {
+  animation: animationmenu 1s 0.1s;
+}
+.menu #starter article:nth-of-type(2), .menu #dishes article:nth-of-type(2), .menu #dessert article:nth-of-type(2) {
+  animation: animationmenu 1s 0.2s;
+}
+.menu #starter article:nth-of-type(3), .menu #dishes article:nth-of-type(3), .menu #dessert article:nth-of-type(3) {
+  animation: animationmenu 1s 0.3s;
+}
+.menu #starter article:nth-of-type(4), .menu #dishes article:nth-of-type(4), .menu #dessert article:nth-of-type(4) {
+  animation: animationmenu 1s 0.4s;
+}
+
+@keyframes animationmenu {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes animationcheckbox {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-70px);
+  }
+}
+@keyframes animationiconecheck {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 footer {
   background-color: rgb(53, 53, 53);
   color: white;
@@ -474,11 +802,19 @@ main figure img {
   object-fit: cover;
 }
 main .menu {
-  width: 100%;
+  flex-basis: 100%;
   padding: 35px 15px 15px 15px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   background-color: rgb(246, 246, 246);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 20px;
+}
+main .menu > button {
+  margin: 30px 0px 50px 0px;
+  width: 170px;
 }
 main .menu .h1menu {
   font-size: 25px;
@@ -501,6 +837,7 @@ main .menu #starter, main .menu #dishes, main .menu #dessert {
   justify-content: center;
   flex-wrap: wrap;
   background-color: rgb(246, 246, 246);
+  flex-basis: 95%;
 }
 main .menu #starter h2, main .menu #dishes h2, main .menu #dessert h2 {
   flex-basis: 100%;
@@ -514,11 +851,13 @@ main .menu #starter article, main .menu #dishes article, main .menu #dessert art
   box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31);
   border-radius: 20px;
   display: flex;
-  flex-wrap: wrap;
+  overflow: hidden;
   background-color: white;
-  flex-basis: 95%;
+  flex-basis: 100%;
   align-items: center;
-  padding: 5px;
+  justify-content: flex-start;
+  cursor: pointer;
+  height: 70px;
 }
 main .menu #starter article h3, main .menu #dishes article h3, main .menu #dessert article h3 {
   flex-basis: 100%;
@@ -526,23 +865,69 @@ main .menu #starter article h3, main .menu #dishes article h3, main .menu #desse
   font-weight: 500;
   padding: 5px;
 }
-main .menu #starter article p:nth-of-type(1), main .menu #dishes article p:nth-of-type(1), main .menu #dessert article p:nth-of-type(1) {
-  flex-basis: 80%;
+main .menu #starter article .detailprice, main .menu #dishes article .detailprice, main .menu #dessert article .detailprice {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 90%;
+  overflow: hidden;
+}
+main .menu #starter article .detail, main .menu #dishes article .detail, main .menu #dessert article .detail {
   padding: 5px;
   font-size: 15px;
   font-weight: 300;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border: 1px solid black;
 }
-main .menu #starter article p:nth-of-type(2), main .menu #dishes article p:nth-of-type(2), main .menu #dessert article p:nth-of-type(2) {
-  flex-basis: 5%;
-  padding: 5px;
-  margin-left: 5px;
-  font-weight: 500;
+main .menu #starter article .detail p, main .menu #dishes article .detail p, main .menu #dessert article .detail p {
+  padding-left: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-main .menu #starter button, main .menu #dishes button, main .menu #dessert button {
-  margin: 30px 0px 60px 0px;
-  width: 50%;
-  font-weight: 600;
-  font-family: "roboto";
+main .menu #starter article .checkmenu, main .menu #dishes article .checkmenu, main .menu #dessert article .checkmenu {
+  flex-basis: 20%;
+  padding: 17px;
+  margin-right: -75px;
+  transform: translateX(0px);
+  background-color: #99E2D0;
+}
+main .menu #starter article .checkmenu i, main .menu #dishes article .checkmenu i, main .menu #dessert article .checkmenu i {
+  color: white;
+  align-items: center;
+  padding: 7px;
+}
+main .menu #starter article:hover .price, main .menu #dishes article:hover .price, main .menu #dessert article:hover .price {
+  transform: translateX(-70px);
+  transition: 1s;
+}
+main .menu #starter article:hover .checkmenu, main .menu #dishes article:hover .checkmenu, main .menu #dessert article:hover .checkmenu {
+  animation: animationcheckbox 1s;
+  animation-fill-mode: forwards;
+}
+main .menu #starter article:hover .checkmenu i, main .menu #dishes article:hover .checkmenu i, main .menu #dessert article:hover .checkmenu i {
+  animation: animationiconecheck 1s;
+}
+main .menu #starter h2 {
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 980px) {
+  main {
+    display: flex;
+  }
+  main .menu {
+    flex-wrap: wrap;
+    display: flex;
+    column-gap: 20px;
+    flex-basis: 100%;
+  }
+  main .menu .h1menu {
+    flex-basis: 100%;
+  }
+  main .menu #starter, main .menu #dishes, main .menu #dessert {
+    flex-basis: 31%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
