@@ -8,26 +8,27 @@ main{
         margin-bottom: -40px;
         width: 100%;
         height: 250px;
-        
         img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        
-        
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }   
-
     }
     .menu{
-        width: 100%;
+        flex-basis: 100%;
         padding: 35px 15px 15px 15px;
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
         background-color:rgba(246,246,246,255);
-        
-    
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        >button{
+            margin: 30px 0px 50px 0px;
+            width: 170px;
+        }
         .h1menu{
-            
             font-size: 25px;
             font-weight: 500;
             font-family: "Shrikhand";
@@ -38,86 +39,123 @@ main{
             flex-basis: 100%;
             display: flex;
             padding-left: 15px;
-    
-    
-            
-            
-            
-        
-            
-            
         }
         i{
             font-size: 25px;
         }
-
         #starter , #dishes, #dessert{
             display: flex;
             row-gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
             background-color: rgba(246,246,246,255);
-            
+            flex-basis: 95%;
             h2{
                 flex-basis: 100%;
-                
                 margin: 40px 10px 5px 13px;
                 .green-line{
                     border-bottom: 1px $tertiary-color solid;
                     border-bottom-width: 3px; 
-                    
                 }
-
-                
             }
             article{
                 @include box-shadow;
                 border-radius: 20px;
                 display: flex;
-                flex-wrap: wrap;
+                overflow: hidden;
                 background-color: white;
-                flex-basis: 95%;
+                flex-basis: 100%;
                 align-items: center;
-                padding: 5px;
-                
-            
-                    
-                
-                
+                justify-content: flex-start;
+                cursor: pointer;
+                height: 70px;
                 h3{
                     flex-basis: 100%;
                     font-size: 18px;
                     font-weight: 500;
                     padding: 5px;
-                    
-                    
                 }
-                p:nth-of-type(1){
-                    
-                    flex-basis: 80%;
+                .detailprice{
+                    display: flex;
+                    flex-direction: row;
+                    flex-basis: 90%;
+                    overflow: hidden;
+                }
+                .detail{
                     padding: 5px;
                     font-size: 15px;
                     font-weight: 300;
-                    
-                    
-                
-                    
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    border: 1px solid black;
+                    p{
+                        padding-left: 5px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        
+                    }
                 }
-                p:nth-of-type(2){
-                
-                    flex-basis: 5%;
-                    padding: 5px;
-                    margin-left: 5px;
-                    font-weight: 500;
-                
+                // .price{
+                //     flex-basis: 10%;
+                //     padding: 5px;
+                //     margin-top: 30px;
+                    
+                //     font-weight: 500;
+                //     text-align: center;
+                //     margin-left: auto;
+                //     transform: translateX(0px);
+                // }
+                .checkmenu{
+                    flex-basis: 20%;
+                    padding: 17px;
+                    margin-right: -75px;
+                    transform: translateX(0px);
+                    background-color:$tertiary-color;
+                    i{
+                        color: white;
+                        align-items: center;
+                        padding: 7px;
+                    }
                 }
-                
             }
-            button{
-                margin: 30px 0px 60px 0px;
-                width: 50%;
-                font-weight: 600;
-                font-family: "roboto";
+            article:hover{
+                .price{
+                    transform: translateX(-70px);
+                    transition: 1s
+                }
+                .checkmenu{
+                    
+                    animation: animationcheckbox 1s;
+                    animation-fill-mode: forwards;
+                    i{
+                        animation: animationiconecheck 1s;
+                    }
+                }
+            }
+        }
+        #starter{
+            h2{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:980px){
+    main{
+        display: flex;
+        .menu{
+            flex-wrap: wrap;
+            display: flex;
+            column-gap: 20px;
+            flex-basis: 100%;
+            .h1menu{
+                flex-basis: 100%;
+           }
+            #starter,#dishes, #dessert {
+                flex-basis: 31%;
             }
         }
     }

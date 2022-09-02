@@ -1,0 +1,177 @@
+/*Loader*/
+body{
+    z-index: 1;
+    position: absolute;
+    .loader{
+        display: flex;
+        z-index: 2;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        background-color: rgba(246,246,246,255);
+        justify-content: center;
+        align-items: center;
+        column-gap: 5%;
+        animation-duration: 3s;
+        animation: hide-loader 3s;
+        animation-fill-mode: forwards;
+        .firstloading{
+            background-color:$primary-color;
+            padding: 28px;
+            width:28px;
+            height: 28px;
+            border-radius: 50%;
+            animation-name:loader;
+            animation-duration:0.8s;
+            animation-timing-function: linear;
+        }
+        .secondloading{
+            padding:28px;
+            width:28px;
+            height: 28px;
+            border-radius: 50%;
+            background-color: $secondary-color;
+            animation-name: loader;
+            animation-duration: 0.8s;
+            animation-delay: 0.5s;
+            animation-timing-function: linear;
+        }
+        .thirdloading{
+            padding: 28px;
+            width:28px;
+            height: 28px;
+            border-radius: 50%;
+            background-color: $tertiary-color;
+            animation-name: loader;
+            animation-duration: 0.8s;
+            animation-delay: 1s;
+            animation-timing-function:linear;
+        }
+        i{
+            font-size: 28px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@keyframes loader {
+    
+    0%{
+        transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(-50px);
+    }
+  
+    50%{
+        transform: translateY(-100px);
+        
+    }
+    75%{
+        transform: translateY(-50px);
+    }
+    
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes hide-loader{
+    70%{
+        opacity: 2;
+    }
+    85%{
+        opacity: 0;
+        z-index: 1;
+    }
+    100%{
+        z-index: 0;
+        opacity: 0;
+    }
+}
+/*hearth animation*/
+
+.like{
+    position: relative;
+    i:nth-of-type(1){
+        position: absolute;
+        transform: scale(1);
+        transition: 300ms ease-in-out;
+    }
+    i:nth-of-type(2){
+        color: transparent;
+        transform: scale(0);
+        transition: 300ms ease-in-out;
+        background: linear-gradient($secondary-color,$primary-color);
+        background-clip: text;
+        color:transparent;
+    }
+    &:hover, &:active{
+        i:nth-of-type(1){
+            transform: scale(0);
+            color: transparent;
+        }
+        i:nth-of-type(2){
+            transform: scale(1);
+            color:linear-gradient($secondary-color,$primary-color);
+        }
+    }
+}
+
+/*Page for menu*/
+.menu{
+    position: relative;
+    z-index: 1;
+    #starter,#dishes,#dessert{
+        animation:animationmenu 1s;
+        z-index: -1;
+       article:nth-of-type(1){
+            animation: animationmenu 1s 0.1s;
+        }
+        article:nth-of-type(2){
+            animation: animationmenu 1s 0.2s;
+        }
+        article:nth-of-type(3){
+            animation: animationmenu 1s 0.3s;
+        }
+        article:nth-of-type(4){
+            animation: animationmenu 1s 0.4s;
+        }
+    }
+}
+
+@keyframes animationmenu{
+    from{
+        transform:translateY(-50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+
+
+// animation check
+
+@keyframes animationcheckbox{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-70px);
+    }
+}
+
+@keyframes animationiconecheck{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+        
+    }
+}

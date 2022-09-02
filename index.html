@@ -8,11 +8,15 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <title>Ohmyfood</title>
 </head>
 <body>
+    <div class="loader">
+        <span class="firstloading"><i class="fa-solid fa-utensils"></i></span>
+        <span class="secondloading"><i class="fa-solid fa-utensils"></i></span>
+        <span class="thirdloading"><i class="fa-solid fa-utensils"></i></span>
+    </div>
     <header class="headerhome">
         <img src="/assets/images/logo/ohmyfood.png" alt="logo de lentreprise">
         
@@ -48,11 +52,13 @@
                         <h3>La palette du goût</h3>
                         <span>Nouveau</span>
                         <p>Ménilmontant</p>
-                        <i class="fa-regular fa-heart"></i>
+                        <div class="like">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-heart"></i></i>
+                        </div>
                     </div>
                 </article>
             </a>
-            
             <a href="/pages/la_note_enchantee.html">
                 <article>
                     <figure>
@@ -62,7 +68,10 @@
                         <h3>La note enchantée</h3>
                         <span>Nouveau</span>
                         <p>Charonne</p>
-                        <i class="fa-regular fa-heart"></i>
+                        <div class="like">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                     </div>
                 </article>
             </a>
@@ -74,7 +83,10 @@
                     <div>
                         <h3>A la française</h3>
                         <p>Cité Rouge</p>
-                        <i class="fa-regular fa-heart"></i>
+                        <div class="like">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                     </div>
                 </article>
             </a>
@@ -86,22 +98,23 @@
                     <div>
                         <h3>Le délice des sens</h3>
                         <p>Folie-Méricourt</p>
-                        <i class="fa-regular fa-heart"></i>
+                        <div class="like">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                     </div>
                 </article>
             </a>
-        
         </section>
     </main>
     <footer>
             <h2>ohmyfood</h2>
             <ul>
-                <li><i class="fa-solid fa-utensils"></i><span>Proposer un restaurant</span></li>
-                <li><i class="fa-solid fa-handshake-angle"></i><span>Devenir partenaire</span></li>
-                <li>Mention légales</li>
-                <li>Contact</li>
+                <li><a href="#"><i class="fa-solid fa-utensils"></i><span>Proposer un restaurant</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-handshake-angle"></i><span>Devenir partenaire</span></a></li>
+                <li><a href="#">Mention légales</a></li>
+                <li><a href="mailto:">Contact</a></li>
             </ul>
     </footer>
-    
 </body>
 </html>
