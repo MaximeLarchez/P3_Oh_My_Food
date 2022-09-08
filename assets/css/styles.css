@@ -770,63 +770,56 @@ header p {
   font-size: 25px;
 }
 
-body {
-  display: flex;
-  width: 100vw;
-  box-sizing: border-box;
-  width: 100%;
-  flex-wrap: wrap;
-}
-body .main-menu {
+main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   flex-basis: 100%;
 }
-body .main-menu figure {
+main figure {
   margin-bottom: -40px;
   height: 250px;
   flex-basis: 100%;
 }
-body .main-menu figure img {
+main figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-body .main-menu .menu {
-  display: flex;
-  flex-basis: 100%;
+main .menu {
+  width: 100%;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   background-color: rgb(246, 246, 246);
-  flex-wrap: wrap;
-  row-gap: 50px;
+  padding: 30px 0px;
 }
-body .main-menu .menu > h1 {
+main .menu > h1 {
+  display: flex;
   flex-basis: 100%;
   font-size: 25px;
   font-weight: 500;
   font-family: "shrikhand";
   background-color: rgb(246, 246, 246);
   justify-content: space-between;
-  display: flex;
-  margin-bottom: 20px;
+  padding: 0px 30px 35px 15px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
 }
-body .main-menu .menu #starter, body .main-menu .menu #dishes, body .main-menu .menu #dessert {
+main .menu #starter, main .menu #dishes, main .menu #dessert {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   row-gap: 15px;
-  padding: 20px;
+  margin: 15px;
 }
-body .main-menu .menu #starter h2, body .main-menu .menu #dishes h2, body .main-menu .menu #dessert h2 {
+main .menu #starter h2, main .menu #dishes h2, main .menu #dessert h2 {
   flex-basis: 100%;
+  margin-bottom: 15px;
 }
-body .main-menu .menu #starter h2 .green-line, body .main-menu .menu #dishes h2 .green-line, body .main-menu .menu #dessert h2 .green-line {
+main .menu #starter h2 .green-line, main .menu #dishes h2 .green-line, main .menu #dessert h2 .green-line {
   border-bottom: 1px #99E2D0 solid;
   border-bottom-width: 3px;
 }
-body .main-menu .menu #starter article, body .main-menu .menu #dishes article, body .main-menu .menu #dessert article {
+main .menu #starter article, main .menu #dishes article, main .menu #dessert article {
   display: flex;
   flex-basis: 100%;
   border-radius: 20px;
@@ -836,29 +829,28 @@ body .main-menu .menu #starter article, body .main-menu .menu #dishes article, b
   cursor: pointer;
   background-color: lightgreen;
 }
-body .main-menu .menu #starter article .detail, body .main-menu .menu #dishes article .detail, body .main-menu .menu #dessert article .detail {
+main .menu #starter article .detail, main .menu #dishes article .detail, main .menu #dessert article .detail {
   display: flex;
-  flex-basis: 80%;
+  flex-basis: 90%;
   flex-wrap: wrap;
   align-items: center;
   padding: 15px;
   background-color: lightblue;
-  white-space: nowrap;
 }
-body .main-menu .menu #starter article .detail h3, body .main-menu .menu #dishes article .detail h3, body .main-menu .menu #dessert article .detail h3 {
+main .menu #starter article .detail h3, main .menu #dishes article .detail h3, main .menu #dessert article .detail h3 {
   flex-basis: 100%;
   font-weight: 500;
   font-size: 18px;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-body .main-menu .menu #starter article .detail p, body .main-menu .menu #dishes article .detail p, body .main-menu .menu #dessert article .detail p {
+main .menu #starter article .detail p, main .menu #dishes article .detail p, main .menu #dessert article .detail p {
   flex-basis: 100%;
   font-size: 15px;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-body .main-menu .menu #starter article .price, body .main-menu .menu #dishes article .price, body .main-menu .menu #dessert article .price {
+main .menu #starter article .price, main .menu #dishes article .price, main .menu #dessert article .price {
   display: flex;
   justify-content: end;
   align-items: flex-end;
@@ -869,13 +861,13 @@ body .main-menu .menu #starter article .price, body .main-menu .menu #dishes art
   transition: right 1s;
   background-color: lightcoral;
 }
-body .main-menu .menu #starter article .checkmenu, body .main-menu .menu #dishes article .checkmenu, body .main-menu .menu #dessert article .checkmenu {
+main .menu #starter article .checkmenu, main .menu #dishes article .checkmenu, main .menu #dessert article .checkmenu {
   position: relative;
   right: -85px;
   background-color: #99E2D0;
   transition: right 1s;
 }
-body .main-menu .menu #starter article .checkmenu i, body .main-menu .menu #dishes article .checkmenu i, body .main-menu .menu #dessert article .checkmenu i {
+main .menu #starter article .checkmenu i, main .menu #dishes article .checkmenu i, main .menu #dessert article .checkmenu i {
   display: flex;
   flex-basis: 100%;
   justify-content: center;
@@ -885,14 +877,41 @@ body .main-menu .menu #starter article .checkmenu i, body .main-menu .menu #dish
   width: 80px;
   font-size: 35px;
 }
-body .main-menu .menu #starter article:hover .checkmenu, body .main-menu .menu #starter article:active .checkmenu, body .main-menu .menu #dishes article:hover .checkmenu, body .main-menu .menu #dishes article:active .checkmenu, body .main-menu .menu #dessert article:hover .checkmenu, body .main-menu .menu #dessert article:active .checkmenu {
+main .menu #starter article:hover .checkmenu, main .menu #starter article:active .checkmenu, main .menu #dishes article:hover .checkmenu, main .menu #dishes article:active .checkmenu, main .menu #dessert article:hover .checkmenu, main .menu #dessert article:active .checkmenu {
   right: 0;
 }
-body .main-menu .menu #starter article:hover .checkmenu i, body .main-menu .menu #starter article:active .checkmenu i, body .main-menu .menu #dishes article:hover .checkmenu i, body .main-menu .menu #dishes article:active .checkmenu i, body .main-menu .menu #dessert article:hover .checkmenu i, body .main-menu .menu #dessert article:active .checkmenu i {
+main .menu #starter article:hover .checkmenu i, main .menu #starter article:active .checkmenu i, main .menu #dishes article:hover .checkmenu i, main .menu #dishes article:active .checkmenu i, main .menu #dessert article:hover .checkmenu i, main .menu #dessert article:active .checkmenu i {
   animation: animationiconecheck 1s;
 }
-body .main-menu .menu #starter article:hover .price, body .main-menu .menu #starter article:active .price, body .main-menu .menu #dishes article:hover .price, body .main-menu .menu #dishes article:active .price, body .main-menu .menu #dessert article:hover .price, body .main-menu .menu #dessert article:active .price {
+main .menu #starter article:hover .price, main .menu #starter article:active .price, main .menu #dishes article:hover .price, main .menu #dishes article:active .price, main .menu #dessert article:hover .price, main .menu #dessert article:active .price {
   right: 0;
+}
+main .menu button {
+  max-width: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 905px) {
+  main {
+    display: flex;
+    flex-basis: 100%;
+  }
+  main .menu {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  main .menu #starter, main .menu #dishes, main .menu #dessert {
+    flex-basis: 30%;
+    background-color: lightsalmon;
+  }
+  main .menu #starter article, main .menu #dishes article, main .menu #dessert article {
+    flex-basis: 100%;
+    background-color: lightgreen;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
