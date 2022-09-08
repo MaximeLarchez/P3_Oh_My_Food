@@ -105,7 +105,9 @@ body{
         transition: 300ms ease-in-out;
         background: linear-gradient($secondary-color,$primary-color);
         background-clip: text;
-        color:transparent;
+        -webkit-background-clip: text;
+        color: transparent;
+        
     }
     &:hover, &:active{
         i:nth-of-type(1){

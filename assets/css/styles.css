@@ -178,6 +178,7 @@ body .loader i {
   transition: 300ms ease-in-out;
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
 }
 .like:hover i:nth-of-type(1), .like:active i:nth-of-type(1) {
@@ -275,6 +276,10 @@ header p {
   font-size: 25px;
 }
 
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
 main form {
   width: 100%;
   background-color: rgb(234, 234, 234);
@@ -673,6 +678,7 @@ body .loader i {
   transition: 300ms ease-in-out;
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
 }
 .like:hover i:nth-of-type(1), .like:active i:nth-of-type(1) {
