@@ -221,14 +221,6 @@ body .loader i {
     opacity: 1;
   }
 }
-@keyframes animationcheckbox {
-  from {
-    transform: translateX(0px);
-  }
-  to {
-    transform: translateX(-70px);
-  }
-}
 @keyframes animationiconecheck {
   from {
     transform: rotate(0deg);
@@ -722,14 +714,6 @@ body .loader i {
   to {
     transform: translateY(0%);
     opacity: 1;
-  }
-}
-@keyframes animationcheckbox {
-  from {
-    transform: translateX(0px);
-  }
-  to {
-    transform: translateX(-70px);
   }
 }
 @keyframes animationiconecheck {
