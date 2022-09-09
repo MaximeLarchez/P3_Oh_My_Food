@@ -161,6 +161,7 @@ body .loader i {
   100% {
     z-index: 0;
     opacity: 0;
+    visibility: hidden;
   }
 }
 /*hearth animation*/
@@ -325,6 +326,8 @@ main #location p {
 main #tutorial {
   display: flex;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 main #tutorial h2 {
   flex-basis: 100%;
@@ -389,20 +392,26 @@ main #tutorial ol li i {
   color: grey;
   text-align: center;
 }
-main #restaurant {
+main > div {
+  flex-basis: 100%;
+  background-color: rgb(246, 246, 246);
+}
+main > div #restaurant {
   display: flex;
   flex-wrap: wrap;
   background-color: rgb(246, 246, 246);
   row-gap: 15px;
   padding-bottom: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-main #restaurant h2 {
+main > div #restaurant h2 {
   flex-basis: 100%;
   font-weight: 600;
   font-size: 20px;
   padding: 50px 0px 20px 10px;
 }
-main #restaurant a {
+main > div #restaurant a {
   background-color: white;
   border: 10px none solid;
   border-radius: 20px;
@@ -411,27 +420,27 @@ main #restaurant a {
   margin: auto;
   position: relative;
 }
-main #restaurant a img {
+main > div #restaurant a img {
   width: 100%;
   height: 210px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   object-fit: cover;
 }
-main #restaurant a div {
+main > div #restaurant a div {
   display: flex;
   flex-wrap: wrap;
 }
-main #restaurant a div h3 {
+main > div #restaurant a div h3 {
   flex-basis: 100%;
   font-weight: 600;
   padding: 10px 0px 5px 10px;
 }
-main #restaurant a div p {
+main > div #restaurant a div p {
   font-weight: 300;
   padding-left: 10px;
 }
-main #restaurant a div span {
+main > div #restaurant a div span {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -441,7 +450,7 @@ main #restaurant a div span {
   font-weight: 500;
   border-radius: 3px;
 }
-main #restaurant a div .like {
+main > div #restaurant a div .like {
   position: absolute;
   bottom: 25px;
   right: 30px;
@@ -661,6 +670,7 @@ body .loader i {
   100% {
     z-index: 0;
     opacity: 0;
+    visibility: hidden;
   }
 }
 /*hearth animation*/
