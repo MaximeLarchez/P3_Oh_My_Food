@@ -63,7 +63,6 @@ a {
 
 body {
   font-family: "roboto";
-  margin: 0 auto;
 }
 
 button {
@@ -564,7 +563,6 @@ a {
 
 body {
   font-family: "roboto";
-  margin: 0 auto;
 }
 
 button {
@@ -839,57 +837,70 @@ body .main-menu .menu #starter article, body .main-menu .menu #dishes article, b
   box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31);
   overflow: hidden;
   cursor: pointer;
+  flex-basis: 100%;
 }
-body .main-menu .menu #starter article .detail, body .main-menu .menu #dishes article .detail, body .main-menu .menu #dessert article .detail {
-  flex-basis: 60%;
+body .main-menu .menu #starter article .detail-price, body .main-menu .menu #dishes article .detail-price, body .main-menu .menu #dessert article .detail-price {
+  display: flex;
+  flex-basis: 90%;
+  transition-duration: 1s;
+}
+body .main-menu .menu #starter article .detail-price .detail, body .main-menu .menu #dishes article .detail-price .detail, body .main-menu .menu #dessert article .detail-price .detail {
+  flex-basis: 90%;
   padding: 10px;
-  background-color: lightgreen;
   white-space: nowrap;
   overflow: hidden;
 }
-body .main-menu .menu #starter article .detail h3, body .main-menu .menu #dishes article .detail h3, body .main-menu .menu #dessert article .detail h3 {
+body .main-menu .menu #starter article .detail-price .detail h3, body .main-menu .menu #dishes article .detail-price .detail h3, body .main-menu .menu #dessert article .detail-price .detail h3 {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 1.2em;
   padding-bottom: 10px;
   font-weight: 450;
 }
-body .main-menu .menu #starter article .detail p, body .main-menu .menu #dishes article .detail p, body .main-menu .menu #dessert article .detail p {
+body .main-menu .menu #starter article .detail-price .detail p, body .main-menu .menu #dishes article .detail-price .detail p, body .main-menu .menu #dessert article .detail-price .detail p {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 0.9em;
   font-weight: 300;
 }
-body .main-menu .menu #starter article .price, body .main-menu .menu #dishes article .price, body .main-menu .menu #dessert article .price {
-  flex-basis: 20%;
-  background-color: lightsalmon;
+body .main-menu .menu #starter article .detail-price .price, body .main-menu .menu #dishes article .detail-price .price, body .main-menu .menu #dessert article .detail-price .price {
+  flex-basis: 10%;
+  padding-right: 10px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   padding-bottom: 8px;
   position: relative;
-  right: -120px;
-  transition: ease-in-out 0.5s;
+  right: -10%;
+  transition-duration: 1s;
 }
 body .main-menu .menu #starter article .checkmenu, body .main-menu .menu #dishes article .checkmenu, body .main-menu .menu #dessert article .checkmenu {
-  flex-basis: 20%;
   background-color: #99E2D0;
   align-items: center;
   display: flex;
   justify-content: center;
   position: relative;
-  right: -120px;
-  transition: ease-in-out 0.5s;
+  right: -15%;
+  transition-duration: 1s;
+  width: 10%;
 }
 body .main-menu .menu #starter article .checkmenu i, body .main-menu .menu #dishes article .checkmenu i, body .main-menu .menu #dessert article .checkmenu i {
-  font-size: 1.8em;
+  font-size: 1.6em;
   color: white;
 }
-body .main-menu .menu #starter article:hover .price, body .main-menu .menu #dishes article:hover .price, body .main-menu .menu #dessert article:hover .price {
-  right: 0px;
+body .main-menu .menu #starter article:hover .detail-price, body .main-menu .menu #dishes article:hover .detail-price, body .main-menu .menu #dessert article:hover .detail-price {
+  flex-basis: 85%;
+}
+body .main-menu .menu #starter article:hover .detail-price .detail, body .main-menu .menu #dishes article:hover .detail-price .detail, body .main-menu .menu #dessert article:hover .detail-price .detail {
+  flex-basis: 90%;
+}
+body .main-menu .menu #starter article:hover .detail-price .price, body .main-menu .menu #dishes article:hover .detail-price .price, body .main-menu .menu #dessert article:hover .detail-price .price {
+  flex-basis: 10%;
+  right: 0%;
 }
 body .main-menu .menu #starter article:hover .checkmenu, body .main-menu .menu #dishes article:hover .checkmenu, body .main-menu .menu #dessert article:hover .checkmenu {
-  right: 0px;
+  width: 15%;
+  right: 0%;
 }
 body .main-menu .menu button {
   display: flex;

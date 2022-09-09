@@ -61,66 +61,90 @@ body{
                     @include box-shadow;
                     overflow: hidden;
                     cursor: pointer;
+                    flex-basis: 100%;
                     
-                    .detail{
-                        flex-basis: 60%;
-                        padding: 10px;
-                        background-color: lightgreen;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        h3{
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                            font-size: 1.2em;
-                            padding-bottom: 10px;
-                            font-weight: 450;
-                        }
-                        p{
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                            font-size: 0.9em;
-                            font-weight: 300;
-                        }
-                    }
-                    .price{
-                        flex-basis: 20%;
-                        background-color: lightsalmon;
+                    .detail-price{
                         display: flex;
-                        justify-content: flex-end;
-                        align-items: flex-end;
-                        padding-bottom: 8px;
-                        position: relative;
-                        right: -120px;
-                        transition: ease-in-out 0.5s;
+                        flex-basis: 90%;
+                        transition-duration: 1s;
                         
-                        
-                        
-                        
+                    
+                    
+                        .detail{
+                            flex-basis: 90%;
+                            padding: 10px;
+                           
+                            white-space: nowrap;
+                            overflow: hidden;
+                            h3{
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                font-size: 1.2em;
+                                padding-bottom: 10px;
+                                font-weight: 450;
+                            }
+                            p{
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                font-size: 0.9em;
+                                font-weight: 300;
+                            }
+                        }
+                        .price{
+                            flex-basis: 10%;
+                            padding-right: 10px;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: flex-end;
+                            padding-bottom: 8px;
+                            position: relative;
+                            right: -10%;
+                            transition-duration: 1s;
+                           
+                            
+                            
+                            
+                        }
                     }
                     .checkmenu{
-                        flex-basis: 20%;
+                        
                         background-color: $tertiary-color;
                         align-items: center;
                         display: flex;
                         justify-content: center;
                         position: relative;
-                        right: -120px;
-                        transition: ease-in-out 0.5s;
+                        right: -15%;
+                        transition-duration: 1s;
+                        width: 10%;
+                        
                         i{
-                            font-size: 1.8em;
+                            font-size: 1.6em;
                             color: white;
+                            
                             
                         }
                     }
                     
                 }
                 article:hover{
-                    .price{
-                        right: 0px;
+                    .detail-price{
+                        flex-basis: 85%;
+                        .detail{
+                            flex-basis: 90%;
+                        }
+                    
+                        .price{
+                            flex-basis: 10%;
+                            right: 0%;
+                        }
                     }
                     .checkmenu{
-                        right: 0px;
+                        width: 15%;
+                        right: 0%;
+                            
+                            
                     }
+                    
                     
                 }
             }
