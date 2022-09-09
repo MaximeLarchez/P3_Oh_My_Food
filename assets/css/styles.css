@@ -63,6 +63,7 @@ a {
 
 body {
   font-family: "roboto";
+  margin: 0 auto;
 }
 
 button {
@@ -563,6 +564,7 @@ a {
 
 body {
   font-family: "roboto";
+  margin: 0 auto;
 }
 
 button {
@@ -774,6 +776,124 @@ header p {
   font-family: "Shrikhand";
   text-align: center;
   font-size: 25px;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+body {
+  width: 100%;
+}
+body .main-menu {
+  display: flex;
+}
+body .main-menu figure {
+  flex-basis: 100%;
+  height: 300px;
+}
+body .main-menu figure img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+body .main-menu .menu {
+  background-color: lightblue;
+  flex-basis: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0px 50px 0px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color: #f6f6f6;
+  z-index: 1;
+  margin-top: -50px;
+}
+body .main-menu .menu > h1 {
+  font-family: "shrikhand";
+  font-size: 1.7em;
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-between;
+  padding: 0px 20px 40px 20px;
+}
+body .main-menu .menu #starter, body .main-menu .menu #dishes, body .main-menu .menu #dessert {
+  margin: 0px 15px;
+}
+body .main-menu .menu #starter h2, body .main-menu .menu #dishes h2, body .main-menu .menu #dessert h2 {
+  font-weight: 400;
+  padding-left: 10px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+body .main-menu .menu #starter h2 .green-line, body .main-menu .menu #dishes h2 .green-line, body .main-menu .menu #dessert h2 .green-line {
+  border-bottom: solid 3px #99E2D0;
+  padding-bottom: 1px;
+}
+body .main-menu .menu #starter article, body .main-menu .menu #dishes article, body .main-menu .menu #dessert article {
+  background-color: white;
+  margin-bottom: 15px;
+  display: flex;
+  border-radius: 15px;
+  box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31);
+  overflow: hidden;
+  cursor: pointer;
+}
+body .main-menu .menu #starter article .detail, body .main-menu .menu #dishes article .detail, body .main-menu .menu #dessert article .detail {
+  flex-basis: 60%;
+  padding: 10px;
+  background-color: lightgreen;
+  white-space: nowrap;
+  overflow: hidden;
+}
+body .main-menu .menu #starter article .detail h3, body .main-menu .menu #dishes article .detail h3, body .main-menu .menu #dessert article .detail h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.2em;
+  padding-bottom: 10px;
+  font-weight: 450;
+}
+body .main-menu .menu #starter article .detail p, body .main-menu .menu #dishes article .detail p, body .main-menu .menu #dessert article .detail p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.9em;
+  font-weight: 300;
+}
+body .main-menu .menu #starter article .price, body .main-menu .menu #dishes article .price, body .main-menu .menu #dessert article .price {
+  flex-basis: 20%;
+  background-color: lightsalmon;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 8px;
+  position: relative;
+  right: -120px;
+  transition: ease-in-out 0.5s;
+}
+body .main-menu .menu #starter article .checkmenu, body .main-menu .menu #dishes article .checkmenu, body .main-menu .menu #dessert article .checkmenu {
+  flex-basis: 20%;
+  background-color: #99E2D0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  right: -120px;
+  transition: ease-in-out 0.5s;
+}
+body .main-menu .menu #starter article .checkmenu i, body .main-menu .menu #dishes article .checkmenu i, body .main-menu .menu #dessert article .checkmenu i {
+  font-size: 1.8em;
+  color: white;
+}
+body .main-menu .menu #starter article:hover .price, body .main-menu .menu #dishes article:hover .price, body .main-menu .menu #dessert article:hover .price {
+  right: 0px;
+}
+body .main-menu .menu #starter article:hover .checkmenu, body .main-menu .menu #dishes article:hover .checkmenu, body .main-menu .menu #dessert article:hover .checkmenu {
+  right: 0px;
+}
+body .main-menu .menu button {
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

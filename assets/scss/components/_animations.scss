@@ -104,6 +104,7 @@ body{
         transform: scale(0);
         transition: 300ms ease-in-out;
         background: linear-gradient($secondary-color,$primary-color);
+        
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
