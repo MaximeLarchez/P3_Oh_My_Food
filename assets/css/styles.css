@@ -888,6 +888,7 @@ body .main-menu .menu #starter article .detail-price .price, body .main-menu .me
   position: relative;
   right: -10%;
   transition-duration: 1s;
+  font-weight: 500;
 }
 body .main-menu .menu #starter article .checkmenu, body .main-menu .menu #dishes article .checkmenu, body .main-menu .menu #dessert article .checkmenu {
   background-color: #99E2D0;
