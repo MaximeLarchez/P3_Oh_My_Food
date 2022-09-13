@@ -3,36 +3,32 @@ img{
     width: 100px;
     height: 100px;
 }
-
 body{
     width: 100%;
+    max-width: 1900px;
     .main-menu{
         display: flex;
-        
         figure{
             flex-basis: 100%;
             height: 300px;
-            
             img{
                 width: 100%;
                 object-fit: cover;
                 height: 100%;
-                
-                
             }
-
         }
         .menu{
-            background-color: lightblue;
+           
             flex-basis: 100%;
-            max-width: 1200px;
+            
             margin: 0 auto;
             padding: 40px 0px 50px 0px;
             border-top-left-radius: 40px;
             border-top-right-radius: 40px;
-            background-color: #f6f6f6;
+            background-color: #f4f4f4;
             z-index: 1;
             margin-top: -50px;
+            justify-content: center;
             >h1{
                 font-family: 'shrikhand';
                 font-size: 1.7em;
@@ -45,7 +41,7 @@ body{
                 margin: 0px 15px;
                 h2{
                     font-weight: 400;
-                    padding-left: 10px;
+                    padding-left: 5px;
                     width: 100%;
                     padding-bottom: 20px;
                     .green-line{
@@ -62,24 +58,19 @@ body{
                     overflow: hidden;
                     cursor: pointer;
                     flex-basis: 100%;
-                    
                     .detail-price{
                         display: flex;
                         flex-basis: 90%;
                         transition-duration: 1s;
-                        
-                    
-                    
                         .detail{
                             flex-basis: 90%;
-                            padding: 10px;
-                           
+                            padding: 10px 0px 10px 5px;
                             white-space: nowrap;
                             overflow: hidden;
                             h3{
                                 overflow: hidden;
                                 text-overflow: ellipsis;
-                                font-size: 1.2em;
+                                font-size: 1em;
                                 padding-bottom: 10px;
                                 font-weight: 450;
                             }
@@ -92,7 +83,7 @@ body{
                         }
                         .price{
                             flex-basis: 10%;
-                            padding-right: 10px;
+                            padding-right: 5px;
                             display: flex;
                             justify-content: flex-end;
                             align-items: flex-end;
@@ -100,14 +91,9 @@ body{
                             position: relative;
                             right: -10%;
                             transition-duration: 1s;
-                           
-                            
-                            
-                            
                         }
                     }
                     .checkmenu{
-                        
                         background-color: $tertiary-color;
                         align-items: center;
                         display: flex;
@@ -116,17 +102,13 @@ body{
                         right: -15%;
                         transition-duration: 1s;
                         width: 10%;
-                        
                         i{
-                            font-size: 1.6em;
+                            font-size: 1.8em;
                             color: white;
-                            
-                            
                         }
                     }
-                    
                 }
-                article:hover{
+                article:hover , article:active{
                     .detail-price{
                         flex-basis: 85%;
                         .detail{
@@ -141,19 +123,66 @@ body{
                     .checkmenu{
                         width: 15%;
                         right: 0%;
-                            
-                            
+                        min-width: 35px;
+                        i{
+                            animation: animationiconecheck 1s;
+                        }
                     }
-                    
-                    
                 }
             }
             button{
                 display: flex;
                 justify-content: center;
+                margin-top: 40px;
+                a{
+                    color: white;
+                }
                 
             }
             
         }
     }
+}
+
+// version Tablette et Ordinateur
+
+@media screen and (min-width:980px){
+body{
+    .main-menu{
+        flex-direction: row;
+        flex-wrap: wrap;
+        .menu{
+            display: flex;
+            flex-basis: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            z-index: 1;
+            margin-top: -50px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            @include box-shadow;
+           #starter ,#dishes, #dessert{
+                width: 30%;
+                article{
+                    flex-basis: 100%;
+                    display: flex;
+                    .detail-price{
+                        width: 60%;
+                        .detail{
+                            flex-basis: 95%;
+                        }
+                        .price{
+                            
+                            flex-basis: 5%;
+                        }
+                        .checkmenu{
+                            flex-basis: 10%;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
 }

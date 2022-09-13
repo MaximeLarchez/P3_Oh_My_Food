@@ -75,6 +75,11 @@ button {
   border: none;
   font-weight: 500;
 }
+button:hover, button:active {
+  opacity: 0.8;
+  box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31);
+  cursor: pointer;
+}
 
 /*Loader*/
 body {
@@ -196,26 +201,22 @@ body .loader i {
   position: relative;
   z-index: 1;
 }
-.menu #starter, .menu #dishes, .menu #dessert {
-  animation: animationmenu 1s;
-  z-index: -1;
-}
 .menu #starter article:nth-of-type(1), .menu #dishes article:nth-of-type(1), .menu #dessert article:nth-of-type(1) {
-  animation: animationmenu 1s 0s;
-}
-.menu #starter article:nth-of-type(2), .menu #dishes article:nth-of-type(2), .menu #dessert article:nth-of-type(2) {
   animation: animationmenu 1s 0.1s;
 }
-.menu #starter article:nth-of-type(3), .menu #dishes article:nth-of-type(3), .menu #dessert article:nth-of-type(3) {
+.menu #starter article:nth-of-type(2), .menu #dishes article:nth-of-type(2), .menu #dessert article:nth-of-type(2) {
   animation: animationmenu 1s 0.2s;
 }
-.menu #starter article:nth-of-type(4), .menu #dishes article:nth-of-type(4), .menu #dessert article:nth-of-type(4) {
+.menu #starter article:nth-of-type(3), .menu #dishes article:nth-of-type(3), .menu #dessert article:nth-of-type(3) {
   animation: animationmenu 1s 0.3s;
+}
+.menu #starter article:nth-of-type(4), .menu #dishes article:nth-of-type(4), .menu #dessert article:nth-of-type(4) {
+  animation: animationmenu 1s 0.4s;
 }
 
 @keyframes animationmenu {
   from {
-    transform: translateY(20%);
+    transform: translateY(30%);
     opacity: 0;
   }
   to {
@@ -587,6 +588,11 @@ button {
   border: none;
   font-weight: 500;
 }
+button:hover, button:active {
+  opacity: 0.8;
+  box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31);
+  cursor: pointer;
+}
 
 /*Loader*/
 body {
@@ -708,26 +714,22 @@ body .loader i {
   position: relative;
   z-index: 1;
 }
-.menu #starter, .menu #dishes, .menu #dessert {
-  animation: animationmenu 1s;
-  z-index: -1;
-}
 .menu #starter article:nth-of-type(1), .menu #dishes article:nth-of-type(1), .menu #dessert article:nth-of-type(1) {
-  animation: animationmenu 1s 0s;
-}
-.menu #starter article:nth-of-type(2), .menu #dishes article:nth-of-type(2), .menu #dessert article:nth-of-type(2) {
   animation: animationmenu 1s 0.1s;
 }
-.menu #starter article:nth-of-type(3), .menu #dishes article:nth-of-type(3), .menu #dessert article:nth-of-type(3) {
+.menu #starter article:nth-of-type(2), .menu #dishes article:nth-of-type(2), .menu #dessert article:nth-of-type(2) {
   animation: animationmenu 1s 0.2s;
 }
-.menu #starter article:nth-of-type(4), .menu #dishes article:nth-of-type(4), .menu #dessert article:nth-of-type(4) {
+.menu #starter article:nth-of-type(3), .menu #dishes article:nth-of-type(3), .menu #dessert article:nth-of-type(3) {
   animation: animationmenu 1s 0.3s;
+}
+.menu #starter article:nth-of-type(4), .menu #dishes article:nth-of-type(4), .menu #dessert article:nth-of-type(4) {
+  animation: animationmenu 1s 0.4s;
 }
 
 @keyframes animationmenu {
   from {
-    transform: translateY(20%);
+    transform: translateY(30%);
     opacity: 0;
   }
   to {
@@ -796,6 +798,7 @@ img {
 
 body {
   width: 100%;
+  max-width: 1900px;
 }
 body .main-menu {
   display: flex;
@@ -810,16 +813,15 @@ body .main-menu figure img {
   height: 100%;
 }
 body .main-menu .menu {
-  background-color: lightblue;
   flex-basis: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 40px 0px 50px 0px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  background-color: #f6f6f6;
+  background-color: #f4f4f4;
   z-index: 1;
   margin-top: -50px;
+  justify-content: center;
 }
 body .main-menu .menu > h1 {
   font-family: "shrikhand";
@@ -834,7 +836,7 @@ body .main-menu .menu #starter, body .main-menu .menu #dishes, body .main-menu .
 }
 body .main-menu .menu #starter h2, body .main-menu .menu #dishes h2, body .main-menu .menu #dessert h2 {
   font-weight: 400;
-  padding-left: 10px;
+  padding-left: 5px;
   width: 100%;
   padding-bottom: 20px;
 }
@@ -859,14 +861,14 @@ body .main-menu .menu #starter article .detail-price, body .main-menu .menu #dis
 }
 body .main-menu .menu #starter article .detail-price .detail, body .main-menu .menu #dishes article .detail-price .detail, body .main-menu .menu #dessert article .detail-price .detail {
   flex-basis: 90%;
-  padding: 10px;
+  padding: 10px 0px 10px 5px;
   white-space: nowrap;
   overflow: hidden;
 }
 body .main-menu .menu #starter article .detail-price .detail h3, body .main-menu .menu #dishes article .detail-price .detail h3, body .main-menu .menu #dessert article .detail-price .detail h3 {
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 1.2em;
+  font-size: 1em;
   padding-bottom: 10px;
   font-weight: 450;
 }
@@ -878,7 +880,7 @@ body .main-menu .menu #starter article .detail-price .detail p, body .main-menu 
 }
 body .main-menu .menu #starter article .detail-price .price, body .main-menu .menu #dishes article .detail-price .price, body .main-menu .menu #dessert article .detail-price .price {
   flex-basis: 10%;
-  padding-right: 10px;
+  padding-right: 5px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -898,26 +900,71 @@ body .main-menu .menu #starter article .checkmenu, body .main-menu .menu #dishes
   width: 10%;
 }
 body .main-menu .menu #starter article .checkmenu i, body .main-menu .menu #dishes article .checkmenu i, body .main-menu .menu #dessert article .checkmenu i {
-  font-size: 1.6em;
+  font-size: 1.8em;
   color: white;
 }
-body .main-menu .menu #starter article:hover .detail-price, body .main-menu .menu #dishes article:hover .detail-price, body .main-menu .menu #dessert article:hover .detail-price {
+body .main-menu .menu #starter article:hover .detail-price, body .main-menu .menu #starter article:active .detail-price, body .main-menu .menu #dishes article:hover .detail-price, body .main-menu .menu #dishes article:active .detail-price, body .main-menu .menu #dessert article:hover .detail-price, body .main-menu .menu #dessert article:active .detail-price {
   flex-basis: 85%;
 }
-body .main-menu .menu #starter article:hover .detail-price .detail, body .main-menu .menu #dishes article:hover .detail-price .detail, body .main-menu .menu #dessert article:hover .detail-price .detail {
+body .main-menu .menu #starter article:hover .detail-price .detail, body .main-menu .menu #starter article:active .detail-price .detail, body .main-menu .menu #dishes article:hover .detail-price .detail, body .main-menu .menu #dishes article:active .detail-price .detail, body .main-menu .menu #dessert article:hover .detail-price .detail, body .main-menu .menu #dessert article:active .detail-price .detail {
   flex-basis: 90%;
 }
-body .main-menu .menu #starter article:hover .detail-price .price, body .main-menu .menu #dishes article:hover .detail-price .price, body .main-menu .menu #dessert article:hover .detail-price .price {
+body .main-menu .menu #starter article:hover .detail-price .price, body .main-menu .menu #starter article:active .detail-price .price, body .main-menu .menu #dishes article:hover .detail-price .price, body .main-menu .menu #dishes article:active .detail-price .price, body .main-menu .menu #dessert article:hover .detail-price .price, body .main-menu .menu #dessert article:active .detail-price .price {
   flex-basis: 10%;
   right: 0%;
 }
-body .main-menu .menu #starter article:hover .checkmenu, body .main-menu .menu #dishes article:hover .checkmenu, body .main-menu .menu #dessert article:hover .checkmenu {
+body .main-menu .menu #starter article:hover .checkmenu, body .main-menu .menu #starter article:active .checkmenu, body .main-menu .menu #dishes article:hover .checkmenu, body .main-menu .menu #dishes article:active .checkmenu, body .main-menu .menu #dessert article:hover .checkmenu, body .main-menu .menu #dessert article:active .checkmenu {
   width: 15%;
   right: 0%;
+  min-width: 35px;
+}
+body .main-menu .menu #starter article:hover .checkmenu i, body .main-menu .menu #starter article:active .checkmenu i, body .main-menu .menu #dishes article:hover .checkmenu i, body .main-menu .menu #dishes article:active .checkmenu i, body .main-menu .menu #dessert article:hover .checkmenu i, body .main-menu .menu #dessert article:active .checkmenu i {
+  animation: animationiconecheck 1s;
 }
 body .main-menu .menu button {
   display: flex;
   justify-content: center;
+  margin-top: 40px;
+}
+body .main-menu .menu button a {
+  color: white;
+}
+
+@media screen and (min-width: 980px) {
+  body .main-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  body .main-menu .menu {
+    display: flex;
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    z-index: 1;
+    margin-top: -50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31);
+  }
+  body .main-menu .menu #starter, body .main-menu .menu #dishes, body .main-menu .menu #dessert {
+    width: 30%;
+  }
+  body .main-menu .menu #starter article, body .main-menu .menu #dishes article, body .main-menu .menu #dessert article {
+    flex-basis: 100%;
+    display: flex;
+  }
+  body .main-menu .menu #starter article .detail-price, body .main-menu .menu #dishes article .detail-price, body .main-menu .menu #dessert article .detail-price {
+    width: 60%;
+  }
+  body .main-menu .menu #starter article .detail-price .detail, body .main-menu .menu #dishes article .detail-price .detail, body .main-menu .menu #dessert article .detail-price .detail {
+    flex-basis: 95%;
+  }
+  body .main-menu .menu #starter article .detail-price .price, body .main-menu .menu #dishes article .detail-price .price, body .main-menu .menu #dessert article .detail-price .price {
+    flex-basis: 5%;
+  }
+  body .main-menu .menu #starter article .detail-price .checkmenu, body .main-menu .menu #dishes article .detail-price .checkmenu, body .main-menu .menu #dessert article .detail-price .checkmenu {
+    flex-basis: 10%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
