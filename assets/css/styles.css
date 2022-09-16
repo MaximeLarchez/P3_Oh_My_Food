@@ -211,7 +211,7 @@ body .loader i {
   animation: animationmenu 1s 0.3s;
 }
 .menu #starter article:nth-of-type(4), .menu #dishes article:nth-of-type(4), .menu #dessert article:nth-of-type(4) {
-  animation: animationmenu 1s 0.4s;
+  animation: animationmenu 1s 0.35s;
 }
 
 @keyframes animationmenu {
@@ -724,7 +724,7 @@ body .loader i {
   animation: animationmenu 1s 0.3s;
 }
 .menu #starter article:nth-of-type(4), .menu #dishes article:nth-of-type(4), .menu #dessert article:nth-of-type(4) {
-  animation: animationmenu 1s 0.4s;
+  animation: animationmenu 1s 0.35s;
 }
 
 @keyframes animationmenu {
@@ -926,9 +926,6 @@ body .main-menu .menu button {
   display: flex;
   justify-content: center;
   margin-top: 40px;
-}
-body .main-menu .menu button a {
-  color: white;
 }
 
 @media screen and (min-width: 980px) {
