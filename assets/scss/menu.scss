@@ -102,7 +102,7 @@ body{
                         transition-duration: 1s;
                         width: 10%;
                         i{
-                            font-size: 1.8em;
+                            font-size: 25px;
                             color: white;
                         }
                     }
@@ -124,6 +124,7 @@ body{
                         right: 0%;
                         min-width: 35px;
                         i{
+                            font-size: 25px;
                             animation: animationiconecheck 1s;
                         }
                     }
@@ -155,6 +156,9 @@ body{
             flex-direction: row;
             flex-wrap: wrap;
             @include box-shadow;
+            >h1{
+                padding-left: 25px;
+            }
            #starter ,#dishes, #dessert{
                 width: 30%;
                 article{
