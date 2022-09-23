@@ -193,7 +193,8 @@ body .loader i {
 }
 .like:hover i:nth-of-type(2), .like:active i:nth-of-type(2) {
   transform: scale(1);
-  color: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
 }
 
 /*Page for menu*/
@@ -706,7 +707,8 @@ body .loader i {
 }
 .like:hover i:nth-of-type(2), .like:active i:nth-of-type(2) {
   transform: scale(1);
-  color: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
 }
 
 /*Page for menu*/
@@ -799,6 +801,7 @@ img {
 body {
   width: 100%;
   max-width: 1900px;
+  min-width: 0px;
 }
 body .main-menu {
   display: flex;
@@ -813,6 +816,7 @@ body .main-menu figure img {
   height: 100%;
 }
 body .main-menu .menu {
+  min-width: 0px;
   flex-basis: 100%;
   margin: 0 auto;
   padding: 40px 0px 50px 0px;
@@ -858,6 +862,7 @@ body .main-menu .menu #starter article .detail-price, body .main-menu .menu #dis
   display: flex;
   flex-basis: 90%;
   transition-duration: 1s;
+  min-width: 0px;
 }
 body .main-menu .menu #starter article .detail-price .detail, body .main-menu .menu #dishes article .detail-price .detail, body .main-menu .menu #dessert article .detail-price .detail {
   flex-basis: 90%;
@@ -868,14 +873,14 @@ body .main-menu .menu #starter article .detail-price .detail, body .main-menu .m
 body .main-menu .menu #starter article .detail-price .detail h3, body .main-menu .menu #dishes article .detail-price .detail h3, body .main-menu .menu #dessert article .detail-price .detail h3 {
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 1em;
+  font-size: 0.9em;
   padding-bottom: 10px;
   font-weight: 450;
 }
 body .main-menu .menu #starter article .detail-price .detail p, body .main-menu .menu #dishes article .detail-price .detail p, body .main-menu .menu #dessert article .detail-price .detail p {
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-weight: 300;
 }
 body .main-menu .menu #starter article .detail-price .price, body .main-menu .menu #dishes article .detail-price .price, body .main-menu .menu #dessert article .detail-price .price {

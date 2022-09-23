@@ -105,11 +105,9 @@ body{
         transform: scale(0);
         transition: 300ms ease-in-out;
         background: linear-gradient($secondary-color,$primary-color);
-        
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
-        
     }
     &:hover, &:active{
         i:nth-of-type(1){
@@ -118,7 +116,8 @@ body{
         }
         i:nth-of-type(2){
             transform: scale(1);
-            color:linear-gradient($secondary-color,$primary-color);
+            background:linear-gradient($secondary-color,$primary-color);
+            -webkit-background-clip: text;
         }
     }
 }
